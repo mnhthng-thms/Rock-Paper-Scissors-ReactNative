@@ -16,6 +16,12 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RockPaperScissorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RockPaperScissorsTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D6C90B0E28A04207891AAF60 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FF80890FC6944C8B2100335 /* ProximaNova-Regular.otf */; };
+		9BBA7D2DBC614A62B6B8EABA /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA104E443DE148A794A55A2C /* SFProDisplay-Regular.ttf */; };
+		C03D62C25C214D76BDE5BA04 /* GDBoing-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1F965AAAEE543AB8E038EBC /* GDBoing-Bold.ttf */; };
+		1525FF097799439D88C62FFA /* GraphikBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C6A9611C4E27A9DBB93B /* GraphikBold.otf */; };
+		0B95B6C77B7D4A098EC4FEC4 /* GraphikLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB921D8E1A400282DAF3AB /* GraphikLight.otf */; };
+		F0781F1D654544E09772DD50 /* GraphikRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48080EB7BEED4D0B9A341CCB /* GraphikRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RockPaperScissors/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		3FF80890FC6944C8B2100335 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; name = "ProximaNova-Regular.otf"; path = "../assets/fonts/ProximaNova-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BA104E443DE148A794A55A2C /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "SFProDisplay-Regular.ttf"; path = "../assets/fonts/SFProDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D1F965AAAEE543AB8E038EBC /* GDBoing-Bold.ttf */ = {isa = PBXFileReference; name = "GDBoing-Bold.ttf"; path = "../assets/fonts/GDBoing-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FBC1C6A9611C4E27A9DBB93B /* GraphikBold.otf */ = {isa = PBXFileReference; name = "GraphikBold.otf"; path = "../assets/fonts/GraphikBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1CBB921D8E1A400282DAF3AB /* GraphikLight.otf */ = {isa = PBXFileReference; name = "GraphikLight.otf"; path = "../assets/fonts/GraphikLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		48080EB7BEED4D0B9A341CCB /* GraphikRegular.otf */ = {isa = PBXFileReference; name = "GraphikRegular.otf"; path = "../assets/fonts/GraphikRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,7 @@
 				00E356EF1AD99517003FC87E /* RockPaperScissorsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				FA97D75D5DF44E26B068B566 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +169,20 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		FA97D75D5DF44E26B068B566 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				3FF80890FC6944C8B2100335 /* ProximaNova-Regular.otf */,
+				BA104E443DE148A794A55A2C /* SFProDisplay-Regular.ttf */,
+				D1F965AAAEE543AB8E038EBC /* GDBoing-Bold.ttf */,
+				FBC1C6A9611C4E27A9DBB93B /* GraphikBold.otf */,
+				1CBB921D8E1A400282DAF3AB /* GraphikLight.otf */,
+				48080EB7BEED4D0B9A341CCB /* GraphikRegular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -295,6 +322,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D6C90B0E28A04207891AAF60 /* ProximaNova-Regular.otf in Resources */,
+				9BBA7D2DBC614A62B6B8EABA /* SFProDisplay-Regular.ttf in Resources */,
+				C03D62C25C214D76BDE5BA04 /* GDBoing-Bold.ttf in Resources */,
+				1525FF097799439D88C62FFA /* GraphikBold.otf in Resources */,
+				0B95B6C77B7D4A098EC4FEC4 /* GraphikLight.otf in Resources */,
+				F0781F1D654544E09772DD50 /* GraphikRegular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

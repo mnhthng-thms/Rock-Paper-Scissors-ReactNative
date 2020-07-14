@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Animated } from 'react-native'
+import { StyleSheet, Animated } from 'react-native'
+import { View } from 'react-native-ui-lib'
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
-
+import fonts from '../styles/fonts'
 import { TIME_GAP, DURATION } from '../gameplay'
 
 import colours from '../styles/colours'
-const green = colours.greenZelyoni
-const yellow = colours.yellowSunshine
+const green = colours.greenZelyony
+const yellow = colours.mySin
 const red = colours.redVenetian
 
 const styles = StyleSheet.create({
@@ -15,18 +16,22 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   remainingTimeTxt: {
-    fontSize: 14,
+    fontFamily: fonts.primaryBold,
+    fontSize: 18
   }
 })
 
 const CountdownCircle = () => {
   return (
-    <View style={styles.container}>
+    <View flex-1 center
+      style={styles.container}
+    >
       <CountdownCircleTimer
-        isPlaying
-        size={50}
-        duration={DURATION}
-        colors={[[green, 0.4], [yellow, 0.3], [red, 0.3]]}
+        //isPlaying
+        size={48}
+        strokeWidth={5}
+        duration={DURATION / 1000}
+        colors={[[green, 0.4], [yellow, 0.3], [red]]}
         onComplete={() => { return [true, TIME_GAP] }}
       >
         {({ remainingTime, animatedColour }) => (

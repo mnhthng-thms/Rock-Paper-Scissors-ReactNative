@@ -1,15 +1,17 @@
 import React from 'react'
-
 import {
   SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  Text,
   StatusBar,
 } from 'react-native'
 
+import { STATUS_BAR_HEIGHT } from './src/helpers/Constants'
+
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: STATUS_BAR_HEIGHT,
+  }
 })
 
 import Banner from './src/modules/Banner'
@@ -20,10 +22,13 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{ flex: 1 }}>
-        <Banner/>
-        <GameBoard/>
-        <GameChoices/>
+      <SafeAreaView style={styles.container}>
+        <Banner />
+        <GameBoard
+          computerChoice='rock'
+          playerChoice='paper'
+        />
+        <GameChoices />
       </SafeAreaView>
     </>
   )

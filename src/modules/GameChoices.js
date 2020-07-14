@@ -1,17 +1,14 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
+import { View } from 'react-native-ui-lib'
+import ChoiceButton from '../components/ChoiceButton'
 import colours from '../styles/colours'
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colours.orange1,
-    flex: 4, 
-    flexDirection: 'row',
-    paddingHorizontal: 2+'%',
-    marginBottom: 3+'%',
-    justifyContent: 'center',
-    alignItems: 'center', 
-  }, 
+    marginVertical: 6 + '%',
+    paddingHorizontal: 3 + '%',
+  },
   inside: {
     fontWeight: 'bold',
     color: colours.white
@@ -20,8 +17,12 @@ const styles = StyleSheet.create({
 
 const GameChoices = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.inside}>Game Choices here</Text>
+    <View flex-1 row centerV spread
+      style={styles.container}
+    >
+      <ChoiceButton type="rock" />
+      <ChoiceButton type="paper" />
+      <ChoiceButton type="scissors" />
     </View>
   )
 }
