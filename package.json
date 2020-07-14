@@ -1,0 +1,45 @@
+{
+  "name": "RockPaperScissors",
+  "version": "0.0.1",
+  "private": false,
+  "author": "MinhTu Thomas Hoang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier .",
+    "prettier:fix": "prettier . --write"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-native": "0.63.0",
+    "react-native-countdown-circle-timer": "^2.2.2",
+    "react-native-ui-lib": "^5.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/runtime": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7",
+    "jest": "^26.1.0",
+    "metro-react-native-babel-preset": "^0.60.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
