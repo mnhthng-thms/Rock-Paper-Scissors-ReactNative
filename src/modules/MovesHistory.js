@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, FlatList } from 'react-native'
 import { View, Text } from 'react-native-ui-lib'
 import { colours, fonts } from '../styles/index'
+import { HistoryIcon } from '../components/index'
 
 const FONT_SIZE = 14
 
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     backgroundColor: colours.white,
     top: -(FONT_SIZE - 1),
-    left: FONT_SIZE * 2,
+    left: FONT_SIZE,
     padding: 5,
     zIndex: 2
   }, 
@@ -22,7 +23,6 @@ const styles = StyleSheet.create({
     borderWidth: 2, 
     height: 95+'%',
     borderColor: colours.minsk,
-    justifyContent: 'flex-end',
     borderRadius: 12,
   }, 
   txt: {
@@ -39,13 +39,18 @@ const MovesHistory = ({ values, ...props}) => {
     >
       <View style={styles.labelContainer}>
         <Text style={styles.txt}>
-          Computer's Past Moves 
+          Computer's Past Moves (>>>)
         </Text>
       </View>
-      <View flex-1 paddingH-20
+      <View flex-1 row center paddingH-20
         style={styles.boxContainer}
       >
-        <Text>{values}</Text>
+        <FlatList
+          numColumns={5}
+          data={values}
+          renderItem={({item}) => (<HistoryIcon value={item}/>)}
+          keyExtractor={(_, idx) => `${idx}`}
+        />
       </View>
     </View>
   )

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const GameBoard = (props) => {
+const GameBoard = ({playerChoice, timerKey,...props}) => {
   return (
     <View flex-9 row center marginV-10
       style={styles.container}
@@ -34,13 +34,15 @@ const GameBoard = (props) => {
         <GameBoardIcon type="machine"/>
       </View>
       <View flex center marginT-40>
-        <CountdownCircle />
+        <CountdownCircle 
+          key={timerKey}
+        />
       </View>
       <View flex-3 column center>
         <Text style={styles.txt}>
           You
         </Text>
-        <GameBoardIcon type={props.playerChoice} />
+        <GameBoardIcon type={playerChoice} />
       </View>
     </View>
   )

@@ -31,12 +31,16 @@ const gameMachine = Machine(
           processGame: [
             { target: 'JUDGEMENT.WIN', cond: 'didWin' },
             { target: 'JUDGEMENT.LOSE', cond: 'didLose' }, 
-            { target: 'JUDGEMENT' }
+            { target: 'JUDGEMENT.TIE' }
           ]
         },
       }, 
       JUDGEMENT: {
+        initial: 'TIE',
         states: {
+          TIE: {
+            
+          },
           LOSE: {
             entry: ['increaseComputerScore']
           }, 

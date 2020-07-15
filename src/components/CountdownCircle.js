@@ -21,13 +21,15 @@ const styles = StyleSheet.create({
   }
 })
 
-const CountdownCircle = () => {
+/* Change `key` property to force a restart */
+const CountdownCircle = ({key, ...props}) => {
   return (
     <View flex-1 center
       style={styles.container}
     >
       <CountdownCircleTimer
         isPlaying
+        key={key}
         size={48}
         strokeWidth={5}
         duration={DURATION / 1000}

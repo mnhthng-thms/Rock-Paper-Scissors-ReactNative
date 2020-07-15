@@ -37,6 +37,7 @@ const App = () => {
     useState(getContextValue('computerScore'))
   const [compPastMoves, setMoves] = useState(getContextValue('computerPastMoves'))
   const [bannerState, setBannerState] = useState(0)
+  const [timerKey, setTimerKey] = useState('0')
   
   const sendByChoice = (choiceCode) => {
     const payload = { value: choiceCode }
@@ -44,24 +45,20 @@ const App = () => {
   }
 
   useEffect(() => {
+    let newPlayerScore = getContextValue('playerScore')
+    let newCompScore = getContextValue('computerScore')
     /* update `computerChoice` & `bannerState` */
-    const judgementState = gameState.value['JUDGEMENT']
-    if (judgementState) {
-      switch (judgementState) {
-        case 'WIN': 
-          setBannerState(1)
-        case 'LOSE': 
-          setBannerState(-1)
-      }
-    }
-  
+    if (gameState.value['JUDGEMENT'] == 'WIN') setBannerState(1)
+    if (gameState.value['JUDGEMENT'] == 'LOSE') setBannerState(-1)
+    setBannerState(0)
+
     /* update `playerScore` & `comScore`*/
-    setCompScore(getContextValue('computerScore'))
-    setPlayerScore(getContextValue('playerScore'))
+    setCompScore(newCompScore)
+    setPlayerScore(newPlayerScore)
     setMoves(getContextValue('computerPastMoves'))
   }, [gameState])
 
-  return (
+   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
@@ -72,20 +69,29 @@ const App = () => {
         />
         <GameBoard
           playerChoice={playerChoice}
+          timerKey={timerKey}
         />
-        <MovesHistory values={compPastMoves}/>
+        <MovesHistory 
+          values={compPastMoves}
+        />
         <GameChoices 
           onRockPressed={() => {
             setPlayerChoice('rock')
             send('playerMadeChoice', { value: 1 })
+            send('processGame')
+            setTimerKey(new Date().getTime())
           }}
           onPaperPressed={() => {
             setPlayerChoice('paper')
             send('playerMadeChoice', { value: 2 })
+            send('processGame')
+            setTimerKey(new Date().getTime())
           }}
           onScissorsPressed={() => {
             setPlayerChoice('scissors')
             send('playerMadeChoice', { value: 3 })
+            send('processGame')
+            setTimerKey(new Date().getTime())
           }}
         />
       </SafeAreaView>
