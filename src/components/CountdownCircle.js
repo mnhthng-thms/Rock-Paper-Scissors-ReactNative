@@ -27,7 +27,7 @@ const CountdownCircle = () => {
       style={styles.container}
     >
       <CountdownCircleTimer
-        //isPlaying
+        isPlaying
         size={48}
         strokeWidth={5}
         duration={DURATION / 1000}

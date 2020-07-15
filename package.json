@@ -5,7 +5,7 @@
   "author": "MinhTu Thomas Hoang",
   "repository": {
     "type": "git",
-    "url": "https://github.com"
+    "url": "https://github.com/mnhthng-thms/Rock-Paper-Scissors-ReactNative.git"
   },
   "license": "MIT",
   "scripts": {
@@ -22,13 +22,16 @@
     "@react-native-community/blur": "^3.6.0",
     "@react-native-community/datetimepicker": "^2.6.0",
     "@react-native-community/netinfo": "^5.9.4",
+    "@xstate/react": "^0.8.1",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.0",
     "react-native-countdown-circle-timer": "^2.2.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.9.0",
     "react-native-svg": "^12.1.0",
-    "react-native-ui-lib": "^5.10.2"
+    "react-native-ui-lib": "^5.10.2",
+    "xstate": "^4.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

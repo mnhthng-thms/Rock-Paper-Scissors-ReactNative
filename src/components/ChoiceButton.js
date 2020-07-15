@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Image } from 'react-native'
-import { Assets, Button } from 'react-native-ui-lib'
-import { loadImageAssets, colours } from '../styles/index'
+import { Button } from 'react-native-ui-lib'
+import { imageAssets, colours } from '../styles/index'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,16 +18,15 @@ const styles = StyleSheet.create({
 })
 
 const ChoiceButton = (props) => {
-  loadImageAssets()
 
   const getImage = () => {
     switch (props.type) {
       case "rock":
-        return Assets.icons.rock
+        return imageAssets.icons.rock
       case "paper":
-        return Assets.icons.paper
+        return imageAssets.icons.paper
       case "scissors":
-        return Assets.icons.scissors
+        return imageAssets.icons.scissors
     }
   }
 
@@ -44,7 +43,7 @@ const ChoiceButton = (props) => {
       iconSource={getImage()}
       iconStyle={styles.icon}
       style={styles.container}
-      onPress={() => alert('pressed!')}
+      onPress={props.onPress}
     />
   )
 }

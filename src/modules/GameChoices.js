@@ -6,8 +6,9 @@ import colours from '../styles/colours'
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 6 + '%',
-    paddingHorizontal: 3 + '%',
+    marginTop: 6 + '%',
+    marginBottom: 9 + '%',
+    paddingHorizontal: 2 + '%'
   },
   inside: {
     fontWeight: 'bold',
@@ -15,14 +16,23 @@ const styles = StyleSheet.create({
   }
 })
 
-const GameChoices = () => {
+const GameChoices = (props) => {
   return (
     <View flex-1 row centerV spread
       style={styles.container}
     >
-      <ChoiceButton type="rock" />
-      <ChoiceButton type="paper" />
-      <ChoiceButton type="scissors" />
+      <ChoiceButton 
+        type="rock" 
+        onPress={props.onRockPressed}
+      />
+      <ChoiceButton
+        type="paper" 
+        onPress={props.onPaperPressed}
+      />
+      <ChoiceButton 
+        type="scissors" 
+        onPress={props.onScissorsPressed}  
+      />
     </View>
   )
 }

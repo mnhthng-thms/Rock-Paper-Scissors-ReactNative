@@ -23,7 +23,9 @@ const colours = {
   pink1: '#FE5C82',
   pumpkin: '#FF6D24',           // a shade of orange
   purple1: '#564AB1',
+  redScalet: '#FF2400',
   redVenetian: '#C80815',
+  sahara: '#B49722',            // a shade of yellow
   white: '#FFFFFF',
   yellowSunshine: '#FFF601'
 }
