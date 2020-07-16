@@ -14,12 +14,13 @@ const styles = StyleSheet.create({
     borderColor: colours.minsk,
     borderWidth: 2,
     borderRadius: 20,
-    elevation: 3,                         // Android only
+    elevation: 2, 
     shadowColor: colours.redVenetian,
   },
   icon: {
     width: 32,
     height: 32,
+    zIndex: 3, 
   }
 })
 
