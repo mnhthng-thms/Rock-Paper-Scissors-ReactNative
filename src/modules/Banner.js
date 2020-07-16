@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { fonts, colours } from '../styles/index'
+import { normalise } from '../helpers/Constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -8,13 +9,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     justifyContent: 'center', 
     alignItems: 'center',
-    marginBottom: 10, 
-    borderRadius: 15,
+    marginBottom: normalise(10), 
+    borderRadius: normalise(15),
     marginHorizontal: 3 + '%',
   },
   txt: {
     fontFamily: fonts.headline,
-    fontSize: 24,
+    fontSize: normalise(24),
     color: colours.white
   }
 })

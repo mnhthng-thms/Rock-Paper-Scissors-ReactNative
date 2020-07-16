@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { colours, fonts } from '../styles/index'
+import { normalise } from '../helpers/Constants'
 
 import CountdownCircle from '../components/CountdownCircle'
 import GameBoardIcon from '../components/GameBoardIcon'
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: colours.lavender1,
     borderWidth: 3,
     borderRadius: 15,
-    marginVertical: 10, 
+    marginVertical: normalise(10), 
     marginHorizontal: 3 + '%',
   },
   iconContainer: {
@@ -28,13 +29,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center', 
     alignItems: 'center',
-    marginTop: 40
+    marginTop: normalise(40)
   },
   txt: {
     fontFamily: fonts.primaryBold,
     fontWeight: 'bold',
-    fontSize: 18,
-    paddingBottom: 8,
+    fontSize: normalise(18),
+    paddingBottom: normalise(8),
   }
 })
 

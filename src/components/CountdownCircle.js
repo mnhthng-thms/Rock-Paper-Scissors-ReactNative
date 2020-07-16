@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, Animated } from 'react-native'
-import { View } from 'react-native-ui-lib'
+import { StyleSheet, Animated, View } from 'react-native'
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 import fonts from '../styles/fonts'
 import { TIME_GAP, DURATION } from '../gameplay'
@@ -12,6 +11,7 @@ const red = colours.redVenetian
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1, 
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
 /* Change `key` property to force a restart */
 const CountdownCircle = ({key, ...props}) => {
   return (
-    <View flex-1 center
+    <View 
       style={styles.container}
     >
       <CountdownCircleTimer

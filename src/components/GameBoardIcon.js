@@ -1,6 +1,8 @@
 import React from 'react'
 import { Image } from 'react-native'
 import { imageAssets } from '../styles/index'
+import { normalise } from '../helpers/Constants'
+
 
 const GameBoardIcon = (props) => {
 
@@ -21,7 +23,10 @@ const GameBoardIcon = (props) => {
 
   return (
     <Image
-      style={{ width: 120, height: 120 }}
+      style={{ 
+        width: normalise(120), 
+        height: normalise(120) 
+      }}
       source={getImage()}
     />
   )

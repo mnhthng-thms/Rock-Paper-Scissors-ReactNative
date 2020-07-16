@@ -1,9 +1,11 @@
 import React from 'react'
 import { StyleSheet, FlatList, View, Text } from 'react-native'
 import { colours, fonts } from '../styles/index'
+import { normalise } from '../helpers/Constants'
+
 import { HistoryIcon } from '../components/index'
 
-const FONT_SIZE = 14
+const FONT_SIZE = normalise(14)
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center', 
     alignItems: 'center',
-    paddingHorizontal: 20,
+    padding: FONT_SIZE,
     borderWidth: 2, 
     height: 95+'%',
     borderColor: colours.minsk,
@@ -56,7 +58,11 @@ const MovesHistory = ({ values, ...props}) => {
         <FlatList
           numColumns={5}
           data={values}
-          renderItem={({item}) => (<HistoryIcon value={item}/>)}
+          renderItem={
+            ({item, index}) => (
+              <HistoryIcon value={item} opacityWeight={index}/>
+            )
+          }
           keyExtractor={(_, idx) => `${idx}`}
         />
       </View>

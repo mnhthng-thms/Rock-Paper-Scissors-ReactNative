@@ -1,21 +1,30 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
-import { Button } from 'react-native-ui-lib'
+import { StyleSheet, Image } from 'react-native'
+import Ripple from 'react-native-material-ripple'
 import { imageAssets, colours } from '../styles/index'
 
 const styles = StyleSheet.create({
   container: {
-    width: 97,
-    height: 60,
+    width: 89,
+    height: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 5,
     marginHorizontal: 4 + '%',
+    borderColor: colours.minsk,
+    borderWidth: 2,
+    borderRadius: 20,
+    elevation: 3,                         // Android only
     shadowColor: colours.redVenetian,
-    elevation: 2,                   // Android only
   },
   icon: {
     width: 32,
     height: 32,
   }
 })
+
+Ripple.defaultProps.rippleContainerBorderRadius 
+  = styles.container.borderRadius
 
 const ChoiceButton = (props) => {
 
@@ -31,21 +40,16 @@ const ChoiceButton = (props) => {
   }
 
   return (
-
-    <Button
-      flex center
-      outline
-      outlineColor={colours.purple1}
-      color={colours.minsk}
-      animateTo='right'
-      activeOpacity={0.5}
-      round
-      size='large'
-      iconSource={getImage()}
-      iconStyle={styles.icon}
+    < Ripple
+      rippleOpacity={0.4}
       style={styles.container}
       onPress={props.onPress}
-    />
+    >
+      <Image 
+        style={styles.icon}
+        source={getImage()}
+      />
+    </Ripple>
   )
 }
 
