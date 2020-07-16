@@ -5,8 +5,17 @@ An implementation of *Rock-Paper-Scissors* game in *React Native* (without Expo)
 Code submission for the 3rd week's assignment of the 2020 React Native course organised by Facebook Developers' Circle Hanoi.
 
 ## Screenshots
+<table>
+  <tr>
+    <td>
+      <img src="./public/screencast.gif"/>
+    </td>
+    <td>
+      <img src="./public/screencast-fast.gif"/>
+    </td>
+  </tr>
+</table>
 
-<img src="./public/screencast.gif" width="40%" height="40%"/>
 
 ## Installation: Brief Guidance
 
