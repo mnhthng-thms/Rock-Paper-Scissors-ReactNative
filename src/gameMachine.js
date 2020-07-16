@@ -11,6 +11,7 @@ const gameMachine = Machine(
     context: {
       // store up the latest 5 past moves
       computerPastMoves: [],
+      lastGameResult: undefined,
       computerChoice: 0,
       playerChoice: 0,
       computerScore: 0, 
@@ -39,12 +40,15 @@ const gameMachine = Machine(
         initial: 'TIE',
         states: {
           TIE: {
-            
+            // update last game result to `0`
+            entry: ['updateLastGameResult']
           },
           LOSE: {
+            // last game result: `-1`; computer score ++
             entry: ['increaseComputerScore']
           }, 
           WIN: {
+            // last game result: `1`; player score ++
             entry: ['increasePlayerScore']
           }
         }, 
@@ -64,10 +68,15 @@ const gameMachine = Machine(
       updatePlayerChoice: assign({
         playerChoice: (_, event) => event.value    
       }),
+      updateLastGameResult: assign({
+        lastGameResult: 0
+      }),
       increaseComputerScore: assign({
+        lastGameResult: -1, 
         computerScore: (context) => context.computerScore + 1
       }), 
       increasePlayerScore: assign({
+        lastGameResult: 1,
         playerScore: (context) => context.playerScore + 1
       }),
       resetChoices: assign({

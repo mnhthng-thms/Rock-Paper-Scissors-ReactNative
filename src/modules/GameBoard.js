@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
-import { View } from 'react-native-ui-lib'
+import { StyleSheet, Text, View } from 'react-native'
 import { colours, fonts } from '../styles/index'
 
 import CountdownCircle from '../components/CountdownCircle'
@@ -8,11 +7,28 @@ import GameBoardIcon from '../components/GameBoardIcon'
 
 const styles = StyleSheet.create({
   container: {
+    flex: 9,
+    flexDirection: 'row',
+    justifyContent: 'center', 
+    alignItems: 'center', 
     borderColor: colours.minsk,
     backgroundColor: colours.lavender1,
     borderWidth: 3,
     borderRadius: 15,
+    marginVertical: 10, 
     marginHorizontal: 3 + '%',
+  },
+  iconContainer: {
+    flex: 3,
+    flexDirection: 'column',
+    justifyContent: 'center', 
+    alignItems: 'center', 
+  }, 
+  timerContainer: {
+    flex: 1,
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginTop: 40
   },
   txt: {
     fontFamily: fonts.primaryBold,
@@ -24,21 +40,21 @@ const styles = StyleSheet.create({
 
 const GameBoard = ({playerChoice, timerKey,...props}) => {
   return (
-    <View flex-9 row center marginV-10
+    <View
       style={styles.container}
     >
-      <View flex-3 column center>
+      <View style={styles.iconContainer}>
         <Text style={styles.txt}>
           Computer
         </Text>
         <GameBoardIcon type="machine"/>
       </View>
-      <View flex center marginT-40>
+      <View style={styles.timerContainer}>
         <CountdownCircle 
           key={timerKey}
         />
       </View>
-      <View flex-3 column center>
+      <View style={styles.iconContainer}>
         <Text style={styles.txt}>
           You
         </Text>

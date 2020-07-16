@@ -1,10 +1,14 @@
 import React,{ useEffect, useState } from 'react'
-import { StyleSheet, Text } from 'react-native'
-import { View } from 'react-native-ui-lib'
+import { StyleSheet, Text, View } from 'react-native'
 import { fonts, colours } from '../styles/index'
 
 const styles = StyleSheet.create({
   container: {
+    flex: 2,
+    flexDirection: 'row', 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginBottom: 10, 
     borderRadius: 15,
     marginHorizontal: 3 + '%',
   },
@@ -31,7 +35,7 @@ const Banner = (props) => {
   }
 
   return (
-    <View flex-2 row center marginB-10
+    <View
       style={[
         styles.container,
         { backgroundColor: getBackgroundColor() }

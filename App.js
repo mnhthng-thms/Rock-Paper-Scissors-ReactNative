@@ -39,18 +39,12 @@ const App = () => {
   const [bannerState, setBannerState] = useState(0)
   const [timerKey, setTimerKey] = useState('0')
   
-  const sendByChoice = (choiceCode) => {
-    const payload = { value: choiceCode }
-    send('playerMadeChoice', payload)
-  }
 
   useEffect(() => {
     let newPlayerScore = getContextValue('playerScore')
     let newCompScore = getContextValue('computerScore')
-    /* update `computerChoice` & `bannerState` */
-    if (gameState.value['JUDGEMENT'] == 'WIN') setBannerState(1)
-    if (gameState.value['JUDGEMENT'] == 'LOSE') setBannerState(-1)
-    setBannerState(0)
+    /* update `bannerState` according to the last game result */
+    setBannerState(getContextValue('lastGameResult'))
 
     /* update `playerScore` & `comScore`*/
     setCompScore(newCompScore)

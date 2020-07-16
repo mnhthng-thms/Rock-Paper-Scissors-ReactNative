@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, FlatList } from 'react-native'
-import { View, Text } from 'react-native-ui-lib'
+import { StyleSheet, FlatList, View, Text } from 'react-native'
 import { colours, fonts } from '../styles/index'
 import { HistoryIcon } from '../components/index'
 
@@ -8,8 +7,12 @@ const FONT_SIZE = 14
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 3+'%',
-    marginVertical: 3+'%'
+    flex: 3, 
+    flexDirection: 'row',
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginHorizontal: 3 + '%',
+    marginVertical: 3 + '%'
   }, 
   labelContainer: {
     position: 'absolute',
@@ -20,6 +23,11 @@ const styles = StyleSheet.create({
     zIndex: 2
   }, 
   boxContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center', 
+    alignItems: 'center',
+    paddingHorizontal: 20,
     borderWidth: 2, 
     height: 95+'%',
     borderColor: colours.minsk,
@@ -34,15 +42,15 @@ const styles = StyleSheet.create({
 
 const MovesHistory = ({ values, ...props}) => {
   return (
-    <View flex-3 row center marginT-10
+    <View 
       style={styles.container}
     >
       <View style={styles.labelContainer}>
         <Text style={styles.txt}>
-          Computer's Past Moves (>>>)
+          Computer's Past Moves
         </Text>
       </View>
-      <View flex-1 row center paddingH-20
+      <View
         style={styles.boxContainer}
       >
         <FlatList

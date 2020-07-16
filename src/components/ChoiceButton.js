@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Image } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Button } from 'react-native-ui-lib'
 import { imageAssets, colours } from '../styles/index'
 
@@ -31,6 +31,7 @@ const ChoiceButton = (props) => {
   }
 
   return (
+
     <Button
       flex center
       outline
