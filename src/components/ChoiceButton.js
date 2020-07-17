@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 5,
     marginHorizontal: 4 + '%',
+    backgroundColor: colours.white,
     borderColor: colours.minsk,
     borderWidth: 2,
     borderRadius: 20,
-    elevation: 2, 
-    shadowColor: colours.redVenetian,
+    elevation: 5, 
   },
   icon: {
     width: 32,
